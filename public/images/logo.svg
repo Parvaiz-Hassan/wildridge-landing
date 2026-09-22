@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" role="img" aria-label="Wild Ridge Adventure — Expertly managed expeditions">
+  <title>Wild Ridge Adventure</title>
+
+  <!-- Mountain silhouette -->
+  <g>
+    <path
+      fill="#0d1b4c"
+      d="M0,138
+         L80,55 L112,85 L150,40 L188,85 L228,18 L268,88
+         L300,58 L336,95 L372,50 L406,90 L440,60
+         L470,92 L508,42 L540,80 L572,55 L610,95 L650,60 L700,138
+         L700,140 L0,140 Z"
+    />
+    <!-- snow caps -->
+    <path fill="#ffffff" d="M150,40 L163,58 L150,64 L137,58 Z" />
+    <path fill="#ffffff" d="M228,18 L244,40 L228,47 L212,40 Z" />
+    <path fill="#ffffff" d="M372,50 L385,66 L372,72 L359,66 Z" />
+    <path fill="#ffffff" d="M508,42 L522,60 L508,66 L494,60 Z" />
+  </g>
+
+  <!-- Wordmark -->
+  <text
+    x="350"
+    y="196"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="700"
+    font-size="54"
+    letter-spacing="1"
+    fill="#1a56db"
+  >WILD RIDGE ADVENTURE</text>
+
+  <!-- Tagline -->
+  <text
+    x="350"
+    y="228"
+    text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-weight="400"
+    font-size="24"
+    fill="#0d1b4c"
+  >Expertly managed expeditions</text>
+</svg>

@@ -21,10 +21,11 @@ export default function RealProblemsSection() {
               key={i}
               className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-neutral-900 p-4 sm:flex-row sm:items-center sm:p-5"
             >
-              <ImgPlaceholder
-                label={`Photo: ${p.title}`}
-                className="h-40 w-full shrink-0 rounded-xl sm:h-28 sm:w-40"
-              />
+              <img
+  src={p.image}
+  alt={p.title}
+  className="h-40 w-full shrink-0 rounded-xl object-cover sm:h-28 sm:w-40"
+/>
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-wide text-orange-500">
                   {p.number}

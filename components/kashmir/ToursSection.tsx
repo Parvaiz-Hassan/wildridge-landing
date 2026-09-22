@@ -28,8 +28,8 @@ export default function ToursSection() {
               className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-neutral-900"
             >
               <div className="relative">
-                <ImgPlaceholder label={`${t.title} photo`} className="aspect-4/3 w-full" />
-                {t.tag && (
+  <img src={t.image} alt={t.title} className="aspect-4/3 w-full object-cover" />
+  {t.tag && (
                   <span className="absolute left-3 top-3 rounded-full bg-orange-600 px-3 py-1 text-[11px] font-bold">
                     {t.tag}
                   </span>

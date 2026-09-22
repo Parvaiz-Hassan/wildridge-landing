@@ -38,10 +38,11 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <ImgPlaceholder
-          label="Founder / team photo in Kashmir, portrait orientation"
-          className="aspect-4/5 w-full rounded-3xl"
-        />
+        <img
+  src="/images/about-team.jpg"
+  alt={siteConfig.brand}
+  className="aspect-4/5 w-full rounded-3xl object-cover"
+/>
       </div>
     </section>
   );

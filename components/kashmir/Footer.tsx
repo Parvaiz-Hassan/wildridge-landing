@@ -5,9 +5,7 @@ export default function Footer() {
     <footer className="bg-black px-4 py-10 text-neutral-400">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
-          <div className="text-base font-extrabold text-white">
-            WILD RIDGE <span className="text-orange-500">ADVENTURE</span>
-          </div>
+          <img src="/images/logo-light.svg" alt={siteConfig.brand} className="h-8 w-auto" />
           <p className="max-w-md text-xs leading-relaxed text-neutral-500">
             Locally run Kashmir & Ladakh trip planning — private cabs, handpicked
             stays, and honest pricing from people who live in the valley.

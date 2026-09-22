@@ -22,10 +22,10 @@ export const siteConfig = {
 
   // TODO: replace with the real YouTube video ID for the vertical hero reel
   // (the part after "v=" or after "youtu.be/")
-  heroVideoId: "dQw4w9WgXcQ",
+  heroVideoId: "HYuFgV13yCk",
 
   // TODO: swap for your GTM container once created
-  gtmId: "GTM-XXXXXXX",
+  gtmId: "GTM-5B8NPR6M",
 
   // TODO: replace with the live Google Business Profile review link once
   // reviews are collected and you're ready to point "Load More" / footer

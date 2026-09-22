@@ -12,19 +12,21 @@ export default function Hero() {
     <section className="relative isolate overflow-hidden bg-neutral-950 text-white">
       {/* Background banner with dark overlay */}
       <div className="absolute inset-0">
-        <ImgPlaceholder
-          label="Hero background: wide Kashmir valley / Dal Lake shikara at sunrise, 1920×1200"
-          className="h-full w-full"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85" />
-      </div>
+  <img
+    src="/images/kashmir-banner.webp"
+    alt="Kashmir valley"
+    className="h-full w-full object-cover"
+  />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85" />
+</div>
 
       <div className="relative mx-auto flex max-w-5xl flex-col items-center px-4 pb-14 pt-10 text-center sm:pb-20 sm:pt-12">
         {/* Logo */}
-        <div className="mb-5 text-lg font-extrabold tracking-wide sm:text-xl">
-          <span className="text-white">WILD RIDGE</span>{" "}
-          <span className="text-orange-500">ADVENTURE</span>
-        </div>
+        <img
+  src="/images/logo-light.svg"
+  alt={siteConfig.brand}
+  className="mb-5 h-14 w-auto sm:h-16"
+/>
 
         {/* Grey eyebrow text, 10-12 words */}
         <p className="mb-3 max-w-md text-xs font-medium tracking-wide text-neutral-400 sm:text-sm">
