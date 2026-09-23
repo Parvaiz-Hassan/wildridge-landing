@@ -84,9 +84,9 @@ try {
     $mail->Host       = 'smtp.titan.email';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'admin@wildridgeadventure.com'; // TODO: same mailbox used for WordPress SMTP
-    $mail->Password   = 'REPLACE_WITH_YOUR_TITAN_MAIL_PASSWORD';
+    $mail->Password   = 'Cipar@12345';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+    $mail->Port       = 465;
 
     $mail->setFrom('admin@wildridgeadventure.com', 'Wild Ridge Adventure Website');
     $mail->addAddress('wildridgeadventure@gmail.com');
