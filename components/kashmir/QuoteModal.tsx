@@ -1,9 +1,13 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { siteConfig, telHref, waHref } from "@/lib/site-config";
 
 type Status = "idle" | "submitting" | "success" | "error";
+
+// How long the "Thank you!" message stays in the popup before we redirect
+// to /thank-you/ — long enough to read, short enough not to feel stuck.
+const REDIRECT_DELAY_MS = 2500;
 
 export default function QuoteModal({
   open,
@@ -14,6 +18,19 @@ export default function QuoteModal({
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const [agreed, setAgreed] = useState(false);
+
+  // On a successful submit, hold the popup open just long enough to show
+  // the confirmation, then send the visitor to /thank-you/ — a real page
+  // load there is what lets GTM fire Google Ads / Meta conversion tags
+  // reliably (a JS event inside the modal can be missed if the tab closes
+  // or an ad blocker interferes).
+  useEffect(() => {
+    if (status !== "success") return;
+    const timer = setTimeout(() => {
+      window.location.href = "/thank-you/";
+    }, REDIRECT_DELAY_MS);
+    return () => clearTimeout(timer);
+  }, [status]);
 
   if (!open) return null;
 
@@ -77,6 +94,13 @@ export default function QuoteModal({
             <p className="mt-1 text-sm text-green-700/80">
               We&apos;ve received your details and will reach out shortly. For a faster
               response, you can also message us directly on WhatsApp.
+            </p>
+            <p className="mt-3 flex items-center justify-center gap-2 text-xs text-green-700/70">
+              <span
+                className="h-3 w-3 animate-spin rounded-full border-2 border-green-700/30 border-t-green-700"
+                aria-hidden
+              />
+              Redirecting you to a confirmation page...
             </p>
             <a
               href={waHref}
