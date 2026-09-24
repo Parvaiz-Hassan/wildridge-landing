@@ -11,7 +11,7 @@ export default function VideoBannerSection() {
     <section className="bg-white px-4 py-14 sm:py-20">
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 rounded-3xl bg-neutral-950 px-6 py-10 text-center text-white sm:flex-row sm:gap-12 sm:px-12 sm:text-left">
         <div className="shrink-0">
-          <VerticalVideo videoId={siteConfig.heroVideoId} />
+          <VerticalVideo src={siteConfig.heroVideoSrc} poster={siteConfig.heroVideoPoster} />
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-widest text-orange-500">

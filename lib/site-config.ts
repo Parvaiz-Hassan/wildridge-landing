@@ -20,12 +20,19 @@ export const siteConfig = {
   emailFrom: "admin@wildridgeadventure.com",
   emailTo: "wildridgeadventure@gmail.com",
 
-  // TODO: replace with the real YouTube video ID for the vertical hero reel
-  // (the part after "v=" or after "youtu.be/")
-  heroVideoId: "HYuFgV13yCk",
+  // Trip preview video — self-hosted (not a YouTube embed), so there's no
+  // player chrome, no YouTube branding, and no tap-to-pause behavior.
+  // TODO: drop your actual video file into /public/videos/ and a still
+  // frame from it into /public/images/ as the poster, then update these
+  // two paths. Keep the file reasonably compressed (a phone-shot 20-30s
+  // clip re-encoded to ~5-10MB in H.264 .mp4 is plenty — this loads on
+  // every visit to the homepage, so an unnecessarily large file slows the
+  // page down for everyone).
+  heroVideoSrc: "/videos/trip-preview.mp4",
+  heroVideoPoster: "/images/trip-preview-poster.jpg",
 
   // TODO: swap for your GTM container once created
-  gtmId: "GTM-5B8NPR6M",
+  gtmId: "GTM-XXXXXXX",
 
   // TODO: replace with the live Google Business Profile review link once
   // reviews are collected and you're ready to point "Load More" / footer

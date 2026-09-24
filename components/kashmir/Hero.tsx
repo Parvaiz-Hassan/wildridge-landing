@@ -56,7 +56,7 @@ export default function Hero() {
 
         {/* Vertical video */}
         <div className="mt-8">
-          <VerticalVideo videoId={siteConfig.heroVideoId} />
+          <VerticalVideo src={siteConfig.heroVideoSrc} poster={siteConfig.heroVideoPoster} />
           <p className="mt-2 text-[11px] text-neutral-500">Tap to watch — 30 sec trip preview</p>
         </div>
 
