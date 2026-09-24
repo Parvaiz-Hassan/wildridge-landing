@@ -5,9 +5,11 @@ import LeadForm from "./LeadForm";
 export default function QuoteModal({
   open,
   onClose,
+  tourName,
 }: {
   open: boolean;
   onClose: () => void;
+  tourName?: string;
 }) {
   if (!open) return null;
 
@@ -30,7 +32,7 @@ export default function QuoteModal({
           ✕
         </button>
 
-        <LeadForm />
+        <LeadForm tourName={tourName} />
       </div>
     </div>
   );

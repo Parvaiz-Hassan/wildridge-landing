@@ -45,7 +45,7 @@ export default function WhyUsSection() {
         </div>
 
         <button
-          onClick={openModal}
+          onClick={() => openModal()}
           className="mt-8 inline-flex items-center gap-2 rounded-full bg-orange-600 px-8 py-3.5 text-sm font-bold transition hover:bg-orange-700"
         >
           Get a Free Quote Now <span aria-hidden>→</span>

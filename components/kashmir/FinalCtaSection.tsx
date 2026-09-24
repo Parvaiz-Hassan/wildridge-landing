@@ -19,7 +19,7 @@ export default function FinalCtaSection() {
 
         <div className="mx-auto mt-7 flex max-w-sm flex-col gap-3">
           <button
-            onClick={openModal}
+            onClick={() => openModal()}
             className="flex items-center justify-center gap-2 rounded-full bg-orange-600 py-3.5 text-sm font-bold transition hover:bg-orange-700"
           >
             Get a Free Quote Now <span aria-hidden>→</span>

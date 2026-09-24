@@ -26,7 +26,7 @@ export default function StickyMobileBar() {
         <span className="text-[10px] font-semibold">WhatsApp</span>
       </a>
       <button
-        onClick={openModal}
+        onClick={() => openModal()}
         className="flex flex-1 flex-col items-center gap-0.5 bg-orange-600 py-2.5 text-white"
       >
         <span className="text-base">📝</span>

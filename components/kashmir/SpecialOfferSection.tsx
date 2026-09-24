@@ -21,7 +21,7 @@ export default function SpecialOfferSection() {
           dates, budget, and what actually fits your trip.
         </p>
         <button
-          onClick={openModal}
+          onClick={() => openModal()}
           className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-bold text-orange-700 shadow-lg transition hover:bg-orange-50 sm:text-base"
         >
           Book My Free Call <span aria-hidden>→</span>

@@ -25,7 +25,7 @@ export default function VideoBannerSection() {
             travellers talk about afterward. No stock clips, no exaggeration.
           </p>
           <button
-            onClick={openModal}
+            onClick={() => openModal()}
             className="mt-5 inline-flex items-center gap-2 rounded-full bg-orange-600 px-6 py-3 text-sm font-bold transition hover:bg-orange-700"
           >
             Get a Free Quote Now <span aria-hidden>→</span>

@@ -2,7 +2,6 @@
 
 import { tours } from "@/data/tours";
 import { useQuoteModal } from "./QuoteModalProvider";
-import ImgPlaceholder from "./ImgPlaceholder";
 
 export default function ToursSection() {
   const { openModal } = useQuoteModal();
@@ -28,8 +27,8 @@ export default function ToursSection() {
               className="flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-neutral-900"
             >
               <div className="relative">
-  <img src={t.image} alt={t.title} className="aspect-4/3 w-full object-cover" />
-  {t.tag && (
+                <img src={t.image} alt={t.title} className="aspect-4/3 w-full object-cover" />
+                {t.tag && (
                   <span className="absolute left-3 top-3 rounded-full bg-orange-600 px-3 py-1 text-[11px] font-bold">
                     {t.tag}
                   </span>
@@ -60,7 +59,7 @@ export default function ToursSection() {
                 </div>
 
                 <button
-                  onClick={openModal}
+                  onClick={() => openModal(t.title)}
                   className="mt-4 flex items-center justify-center gap-2 rounded-full bg-orange-600 py-2.5 text-sm font-bold transition hover:bg-orange-700"
                 >
                   📞 Request Callback

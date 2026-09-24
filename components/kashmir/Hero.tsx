@@ -3,7 +3,6 @@
 import { siteConfig, telHref, waHref } from "@/lib/site-config";
 import { useQuoteModal } from "./QuoteModalProvider";
 import VerticalVideo from "./VerticalVideo";
-import ImgPlaceholder from "./ImgPlaceholder";
 
 export default function Hero() {
   const { openModal } = useQuoteModal();
@@ -12,21 +11,21 @@ export default function Hero() {
     <section className="relative isolate overflow-hidden bg-neutral-950 text-white">
       {/* Background banner with dark overlay */}
       <div className="absolute inset-0">
-  <img
-    src="/images/kashmir-banner.webp"
-    alt="Kashmir valley"
-    className="h-full w-full object-cover"
-  />
-  <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85" />
-</div>
+        <img
+          src="/images/hero-banner.svg"
+          alt="Kashmir valley at sunrise"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85" />
+      </div>
 
       <div className="relative mx-auto flex max-w-5xl flex-col items-center px-4 pb-14 pt-10 text-center sm:pb-20 sm:pt-12">
         {/* Logo */}
         <img
-  src="/images/logo-light.svg"
-  alt={siteConfig.brand}
-  className="mb-5 h-14 w-auto sm:h-16"
-/>
+          src="/images/logo-light.svg"
+          alt={siteConfig.brand}
+          className="mb-5 h-14 w-auto sm:h-16"
+        />
 
         {/* Grey eyebrow text, 10-12 words */}
         <p className="mb-3 max-w-md text-xs font-medium tracking-wide text-neutral-400 sm:text-sm">
@@ -48,7 +47,7 @@ export default function Hero() {
 
         {/* Primary CTA */}
         <button
-          onClick={openModal}
+          onClick={() => openModal()}
           className="mt-7 flex items-center gap-2 rounded-full bg-orange-600 px-7 py-3.5 text-sm font-bold shadow-lg shadow-orange-900/30 transition hover:bg-orange-700 sm:text-base"
         >
           Get a Free Quote Now

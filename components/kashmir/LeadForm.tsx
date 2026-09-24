@@ -97,7 +97,16 @@ const iconBase = "pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate
 // The exact same lead-capture form, used both inside the "Get a Free Quote"
 // popup (QuoteModal) and embedded directly on the Contact page — one
 // component, one source of truth, so the two never drift out of sync.
-export default function LeadForm({ showHeader = true }: { showHeader?: boolean }) {
+export default function LeadForm({
+  showHeader = true,
+  tourName,
+}: {
+  showHeader?: boolean;
+  // Set when the popup was opened from a specific tour card's "Request
+  // Callback" button — shown back to the visitor and sent along with the
+  // rest of the form so it lands in the email too.
+  tourName?: string;
+}) {
   const [status, setStatus] = useState<Status>("idle");
   const [phone, setPhone] = useState("");
 
@@ -125,6 +134,7 @@ export default function LeadForm({ showHeader = true }: { showHeader?: boolean }
     // The visible phone input only collects the 10-digit local number (the
     // +91 box next to it is fixed) — combine them into one value here.
     data.set("phone", `+91${phone}`);
+    if (tourName) data.set("tourName", tourName);
 
     setStatus("submitting");
     try {
@@ -182,6 +192,13 @@ export default function LeadForm({ showHeader = true }: { showHeader?: boolean }
             </p>
           </div>
         </div>
+      )}
+
+      {tourName && (
+        <p className="mb-4 inline-flex items-center gap-1.5 rounded-full bg-orange-50 px-3 py-1.5 text-xs font-medium text-orange-700">
+          <SuitcaseIcon className="h-3.5 w-3.5" />
+          Enquiring about: {tourName}
+        </p>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-3">
