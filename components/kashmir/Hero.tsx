@@ -12,7 +12,7 @@ export default function Hero() {
       {/* Background banner with dark overlay */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-banner.svg"
+          src="/images/hero-banner.webp"
           alt="Kashmir valley at sunrise"
           className="h-full w-full object-cover"
         />
