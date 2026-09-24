@@ -32,7 +32,7 @@ export const siteConfig = {
   heroVideoPoster: "/images/trip-preview-poster.jpg",
 
   // TODO: swap for your GTM container once created
-  gtmId: "GTM-XXXXXXX",
+  gtmId: "GTM-5B8NPR6M",
 
   // TODO: replace with the live Google Business Profile review link once
   // reviews are collected and you're ready to point "Load More" / footer

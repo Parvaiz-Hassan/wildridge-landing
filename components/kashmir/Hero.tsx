@@ -29,7 +29,7 @@ export default function Hero() {
 
         {/* Grey eyebrow text, 10-12 words */}
         <p className="mb-3 max-w-md text-xs font-medium tracking-wide text-neutral-400 sm:text-sm">
-          Kashmir & Ladakh trips planned honestly, priced fairly, run by people who live here.
+          Kashmir trips planned honestly, priced fairly, run by people who live here.
         </p>
 
         {/* Heading, white, 5-7 words */}
